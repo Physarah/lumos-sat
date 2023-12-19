@@ -13,3 +13,6 @@ EARTH_RADIUS = 6378 * 1000
 
 #: :math:`1360`  :math:`\frac{W}{m^2}`
 SUN_INTENSITY = 1360
+
+
+EARTHSHINE_AVERAGE = 300
