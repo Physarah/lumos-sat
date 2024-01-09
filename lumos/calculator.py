@@ -85,7 +85,7 @@ def get_intensity_satellite_frame(
         observer_position,
         include_sun=True,
         include_earthshine=True,
-        earth_panel_density=150,
+        earth_panel_density=300,
         earth_brdf=None,
         ceres=None):
     '''

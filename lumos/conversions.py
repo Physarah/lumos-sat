@@ -4,7 +4,8 @@ import numpy as np
 import lumos.constants
 import lumos.functions
 
-def intensity_to_ab_mag(intensity, clip = True):
+
+def intensity_to_ab_mag(intensity, clip=False):
     """
     Converts from intensity to AB Magnitude.
     If clip is set to True, outputs below 12 AB Magnitude will be clipped.
@@ -19,8 +20,9 @@ def intensity_to_ab_mag(intensity, clip = True):
     log_val = intensity * lumos.constants.WAVELENGTH / (lumos.constants.SPEED_OF_LIGHT * 3631e-26)
     if clip:
         log_val = np.clip(log_val, 10e-6, None)
-    ab_mag = -2.5 * np.log10( log_val )
+    ab_mag = -2.5 * np.log10(log_val+0.0000000000000001)
     return ab_mag
+
 
 def altaz_to_unit(altitude, azimuth):
     """
@@ -39,6 +41,7 @@ def altaz_to_unit(altitude, azimuth):
     y = np.sin(phi) * np.sin(theta)
     z = np.cos(phi)
     return x, y, z
+
 
 def unit_to_spherical(x, y, z):
     """
@@ -59,6 +62,7 @@ def unit_to_spherical(x, y, z):
     phi = np.rad2deg(phi)
     theta = np.rad2deg(theta)
     return phi, theta
+
 
 def spherical_to_unit(phi, theta):
     """

@@ -6,13 +6,13 @@ Fundamental constants used throughout Lumos.
 SPEED_OF_LIGHT = 3.0 * 1e8
 
 #: :math:`532 \times 10^{-9}`  :math:`m`
-WAVELENGTH = 532 * 1e-9
-
+#WAVELENGTH = 532 * 1e-9
+WAVELENGTH = 600 * 1e-9
 #: :math:`6378 \times 10^{3}`  :math:`m`
 EARTH_RADIUS = 6378 * 1000
 
 #: :math:`1360`  :math:`\frac{W}{m^2}`
-SUN_INTENSITY = 1360
+#SUN_INTENSITY = 1360
+SUN_INTENSITY = 260
 
-
-EARTHSHINE_AVERAGE = 300
+EARTHSHINE_AVERAGE = 0
